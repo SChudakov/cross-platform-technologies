@@ -43,7 +43,18 @@ class DijkstraShortestPathTest {
     }
 
     @Test
-    public void testShortestPathIsCorrect() {
+    public void testShortestPathIsCorrect1() {
+        Graph graph = new Graph();
+        graph.addEdge(1, 2);
+        graph.addEdge(2, 3);
+        graph.addEdge(3, 4);
+
+        DijkstraShortestPath shortestPath = new DijkstraShortestPath(graph);
+        Assertions.assertEquals(Arrays.asList(1, 2, 3, 4), shortestPath.getShortestPath(1, 4));
+    }
+
+    @Test
+    public void testShortestPathIsCorrect2() {
         Graph graph = new Graph();
         graph.addEdge(0, 1);
         graph.addEdge(1, 2);

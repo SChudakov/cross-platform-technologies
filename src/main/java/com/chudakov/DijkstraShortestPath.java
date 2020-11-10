@@ -24,7 +24,7 @@ public class DijkstraShortestPath extends BaseShortestPathAlgorithm {
         }
 
         distanceAndPredecessorMap = new HashMap<>();
-        distanceAndPredecessorMap.put(0, Pair.of(0, null));
+        distanceAndPredecessorMap.put(source, Pair.of(0, null));
 
         heap = new PriorityQueue<>((o1, o2) -> Integer.compare(o1.getLeft(), o2.getRight()));
         heap.add(Pair.of(0, source));

@@ -67,7 +67,7 @@ public class AStarShortestPath extends BaseShortestPathAlgorithm {
                 continue;
             }
 
-            int gScore_current = gScoreMap.get(distance);
+            int gScore_current = gScoreMap.get(vertex);
             int tentativeGScore = gScore_current + 1;
             int fScore = tentativeGScore + heuristic.getEstimatedDistance(successor, sink);
 

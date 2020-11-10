@@ -44,6 +44,17 @@ class AStarShortestPathTest {
     }
 
     @Test
+    public void testShortestPathIsCorrect1() {
+        Graph graph = new Graph();
+        graph.addEdge(1, 2);
+        graph.addEdge(2, 3);
+        graph.addEdge(3, 4);
+
+        AStarShortestPath shortestPath = new AStarShortestPath(graph, heuristic);
+        Assertions.assertEquals(Arrays.asList(1, 2, 3, 4), shortestPath.getShortestPath(1, 4));
+    }
+
+    @Test
     public void testShortestPathIsCorrect() {
         Graph graph = new Graph();
         graph.addEdge(0, 1);
